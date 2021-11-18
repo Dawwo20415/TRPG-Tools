@@ -103,10 +103,10 @@
             </StackPanel >
 
             <StackPanel Grid.Row="2" Grid.Column="0">
-                <Button Height="50">Settings</Button>
-                <Button Height="50">New</Button>
-                <Button Height="50">Filter</Button>
-                <Button Height="50">Directory</Button>
+                <Button Height="50" Style="{StaticResource IconButton}" Content="Sett"/>
+                <Button Height="50" Style="{StaticResource IconButton}" Content="New"/>
+                <Button Height="50" Style="{StaticResource IconButton}" Content="Filter"/>
+                <Button Height="50" Style="{StaticResource IconButton}" Content="Dir"/>
             </StackPanel>
 
             <ScrollViewer Grid.Row="2" Grid.Column="1">
