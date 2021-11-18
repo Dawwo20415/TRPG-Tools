@@ -97,6 +97,8 @@
   <ItemGroup>
     <Folder Include="Assets\Fonts\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="ExampleRootFolder\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

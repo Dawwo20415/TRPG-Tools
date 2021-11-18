@@ -70,18 +70,40 @@
 
             <StackPanel Grid.Column="1"
                       Grid.Row="1"
-                      HorizontalAlignment="Left"
+                      HorizontalAlignment="Right"
                       VerticalAlignment="Center"
-                        Orientation="Horizontal">
+                      Orientation="Horizontal"
+                      Margin="0,0,30,0">
                 
-                <CheckBox Margin="5,0,0,0"
-                        Foreground="#F5F7FA">
+                <CheckBox Margin="10,0,10,0"
+                        Foreground="#F5F7FA"
+                          VerticalAlignment="Center">
                     Simplified View
                 </CheckBox>
+
+                <CheckBox Margin="10,0,10,0"
+                        Foreground="#F5F7FA"
+                          VerticalAlignment="Center">
+                    Option #X
+                </CheckBox>
+
+                <CheckBox Margin="10,0,10,0"
+                        Foreground="#F5F7FA"
+                          VerticalAlignment="Center">
+                    Option #Y
+                </CheckBox>
+
+                <TextBox Margin="10,0,10,0"
+                         VerticalAlignment="Center"
+                         Height="20"
+                         Width="150">
+                    Search
+                </TextBox>
 
             </StackPanel >
 
             <StackPanel Grid.Row="2" Grid.Column="0">
+                <Button Height="50">Settings</Button>
                 <Button Height="50">New</Button>
                 <Button Height="50">Filter</Button>
                 <Button Height="50">Directory</Button>
@@ -98,7 +120,15 @@
                     <RadioButton Height="75">Character #7</RadioButton>
                 </StackPanel>
             </ScrollViewer>
-            
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Margin="0,0,30,0">
+                <Button Height="25" Width="100">SELECT</Button>
+
+            </StackPanel>
 
         </Grid>
 
