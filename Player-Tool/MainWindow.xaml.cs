@@ -24,5 +24,11 @@ namespace Player_Tool
         {
             InitializeComponent();
         }
+
+        private void closeWindow(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
     }
 }

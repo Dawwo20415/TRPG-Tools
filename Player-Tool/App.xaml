@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/ButtonResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="FontAwesome">/Fonts/fontawesome-webfont.ttf#FontAwesome</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
