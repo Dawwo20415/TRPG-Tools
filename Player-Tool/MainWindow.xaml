@@ -116,10 +116,11 @@
                 </CheckBox>
 
                 <TextBox Margin="10,0,10,0"
+                         Style="{StaticResource SearchBar}"
                          VerticalAlignment="Center"
+                         Foreground="White"
                          Height="20"
                          Width="150">
-                    Search
                 </TextBox>
 
             </StackPanel >

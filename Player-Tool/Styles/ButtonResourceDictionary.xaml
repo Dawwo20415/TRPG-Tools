@@ -39,9 +39,8 @@
                                 BorderBrush="Red"
                                 BorderThickness="4"
                                 CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Margin="5,0,0,0"/>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -59,6 +58,71 @@
             <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Background" Value="Green"/>
             </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- Search Bar Style template-->
+    <Style TargetType="{x:Type TextBox}"
+           x:Key="SearchBar">
+        <Style.Setters>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="Transparent"
+                                CornerRadius="2"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}">
+                            <StackPanel Orientation="Horizontal"
+                                        Height="{TemplateBinding Height}"
+                                        Width="{TemplateBinding Width}">
+                                <fa:ImageAwesome Icon="Search"
+                                                 Foreground="White"
+                                                 Margin="0,3,0,3"/>
+                                <Border Background="Blue"
+                                        CornerRadius="2"
+                                        BorderBrush="Aqua"
+                                        BorderThickness="0"
+                                        Margin="5,2,0,2"
+                                        Width="120">
+                                    <Grid>
+                                        <TextBox Text="{TemplateBinding Text}"
+                                                 BorderThickness="0"
+                                                 Background="Transparent"
+                                                 VerticalContentAlignment="Center"
+                                                 Foreground="{TemplateBinding Foreground}"
+                                                 x:Name="SearchBox"/>
+                                        
+                                        <TextBlock Text="Search"
+                                                   VerticalAlignment="Center"
+                                                   HorizontalAlignment="Left"
+                                                   IsHitTestVisible="False"
+                                                   Margin="5,0,0,0"
+                                                   FontFamily="{TemplateBinding FontFamily}"
+                                                   Foreground="{TemplateBinding Foreground}">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                    <Setter Property="Visibility" Value="Hidden"/>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Red"/>
+        </Style.Setters>
+
+        <Style.Triggers>
+            
         </Style.Triggers>
     </Style>
     
